@@ -1,13 +1,13 @@
 import { href, Link } from "react-router";
-import PlayGround from "./tutorialComponents/PlayGround";
 
 function components() {
   return (
     <div className="p-12">
       <p>
-        Na én most megmutatom neked, hogy hogy néz ki egy componens. Alapvetően
-        Alapból a <span className="italic font-bold">component</span> snippet
-        generál neked egy alap componenst.
+        Na én most megmutatom neked, hogy hogy néz ki egy componens. A komponens
+        mindig nagy betűvel kell hogy kezdődjön. Alapból a{" "}
+        <span className="italic font-bold">component</span> snippet generál
+        neked egy alap componenst.
       </p>
       <p>
         Amit látni fogsz hogy egy html szerű cuccot return el vissza. Ezt
@@ -20,9 +20,7 @@ function components() {
         Amivel különbözik a JSX a htmltől, hogy class helyett{" "}
         <span className="font-bold">className</span> van. For helyett{" "}
         <span className="font-bold">htmlFor</span>. A többi kb ugyanaz. Ami
-        menő, ha raksz egy &#123; &#125; amit e közé írsz az typescript. Viszont
-        fontos, hogy ez vagy JSX elemet returnel vagy void. Itt nem tudsz új
-        változót létrehozni sem.
+        menő, ha raksz egy &#123; &#125; amit e közé írsz az typescript.
       </p>
       <p>
         Ami még fontos, hogy nem tudsz két elemet returnelni JSX ben. Pl:

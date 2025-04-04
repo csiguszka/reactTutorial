@@ -44,7 +44,7 @@ function conditionRender() {
         </div>
       </div>
       <Link className="underline text-cyan-400" to={href("/tutorial/list")}>
-        Feltételes renderelés
+        List
       </Link>
     </div>
   );

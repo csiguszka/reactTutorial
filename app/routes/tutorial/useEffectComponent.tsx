@@ -44,7 +44,7 @@ function useEffectComponent() {
       <p>
         Itt egy példa api lekérésére, mert azt rendszerint egy egyszer lefutós
         useEffectbe rakjuk. A példában megvárjuk az api válaszát és addig egy
-        egyszerű loading animációt mutatunk.
+        egyszerű loading animációt mutatunk. Nyomj egy f5 öt és nézd meg:
       </p>
       <ApiExample />
     </div>

@@ -5,7 +5,7 @@ ctrl shift b
 
 localhost:5173
 
-Nézd meg, hogy hogyan működik a route, illetve nyugodtan menj végig a tutorialon amit csináltam, úgy ahogy jól érzed.
+Nézd meg a root.tsx et és, hogy hogyan működik a route, illetve nyugodtan menj végig a tutorialon amit csináltam, úgy ahogy jól érzed.
 Kérdezz bizalommal :D
 
 További cucc ami nincs benne de érdemes tudni:
