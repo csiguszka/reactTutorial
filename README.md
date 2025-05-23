@@ -1,4 +1,4 @@
-npm i
+npm i --legacy-peer-deps
 npm run dev
 vagy
 ctrl shift b

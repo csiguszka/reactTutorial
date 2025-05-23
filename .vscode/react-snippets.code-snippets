@@ -57,5 +57,1194 @@
     "prefix": "useEffect",
     "body": ["useEffect(() => {", "  ${3:}", "}, [])"],
     "description": "useEffect"
+  },
+  "Arrow Function": {
+    "prefix": "fun",
+    "body": ["() => {$0}"],
+    "description": "Arrow Function"
+  },
+
+  "find": {
+    "prefix": "find",
+    "body": ["find((${1:data}) => ${1:data}. === otherData)"],
+    "description": "Nuggets Find Object"
+  },
+
+  "React Functional Component Setup": {
+    "prefix": "compsetup",
+    "body": [
+      "const ${1:ComponentName} = () => {",
+      "  return (",
+      "<div className=\"container\">${1:ComponentName}",
+      "  $0",
+      "</div>",
+      "  );",
+      "};",
+      "",
+      "export default ${1:ComponentName};"
+    ],
+    "description": "Create a React functional component"
+  },
+
+  "narrayfrom": {
+    "prefix": "arrayfrom",
+    "body": ["Array.from({length: ${1:10}}, (_, index)=> index);"],
+    "description": "Array.from ${1:CompName}"
+  },
+
+  "nround": {
+    "prefix": "roundmatek",
+    "body": ["Math.round($0)"],
+    "description": "Like math"
+  },
+
+  "nroundfel": {
+    "prefix": "roundfel",
+    "body": ["Math.ceil($0)"],
+    "description": "Always up"
+  },
+
+  "nroundle": {
+    "prefix": "roundle",
+    "body": ["Math.floor($0)"],
+    "description": "Always down"
+  },
+
+  "nround0": {
+    "prefix": "round0",
+    "body": ["Math.ceil($0)"],
+    "description": "Always closer to zero"
+  },
+
+  "async": {
+    "prefix": "async",
+    "body": [
+      "const asyncFunction = async() => {",
+      "try {",
+      "const data = await getData()",
+      "} catch (error) {",
+      "log(error)",
+      "}",
+      "}",
+      "asyncFunction()",
+
+      "const getData = (): Promise<string> => {",
+      "return new Promise((resolve, reject) => {",
+      "return resolve('data')",
+      "reject(`Wrong ID`)",
+      "})",
+      "}"
+    ],
+    "description": "Show how async work"
+  },
+
+  "callback": {
+    "prefix": "callback",
+    "body": [
+      "function makeUppercase(value: string): string{",
+      "return value.toUpperCase();",
+      "}",
+
+      "function handleName(name: string, cb: (value: string) => string){",
+      "const fullName = `${name} smith`;",
+      "log(cb(fullName));",
+      "}",
+
+      "handleName('peter', makeUppercase);"
+    ],
+    "description": "Show how callback work"
+  },
+
+  "typefunc": {
+    "prefix": "typefunc",
+    "body": ["(value: string) => string"],
+    "description": "typefunc (name: $type)"
+  },
+
+  "date": {
+    "prefix": "date",
+    "body": ["new Date()"],
+    "description": "whole date"
+  },
+
+  "dateMillisec": {
+    "prefix": "dateMillisec",
+    "body": ["new Date().getTime()"],
+    "description": "date in millisec"
+  },
+
+  "dateSec": {
+    "prefix": "dateSec",
+    "body": ["new Date().getTime() * 1000"],
+    "description": "date in sec"
+  },
+
+  "objszetszedes": {
+    "prefix": "objszetszedes",
+    "body": [
+      "const bob: Person = {",
+      "first: 'bob',",
+      "last: 'sanders',",
+      "city: 'chicago',",
+      "siblings: {",
+      "sister: 'jane',",
+      "},",
+      "};",
+
+      "function printPerson({last:shakeAndBake, first, last, city, siblings:{sister}}: Person){",
+      "log(first, last, city, sister, shakeAndBake)",
+      "}",
+
+      "printPerson(bob)"
+    ],
+    "description": "Pelda az object szetszedesere valtozokba"
+  },
+
+  "destructuringObj": {
+    "prefix": "destructuringObj",
+    "body": [
+      "const bob: Person = {",
+      "first: 'bob',",
+      "last: 'sanders',",
+      "city: 'chicago',",
+      "siblings: {",
+      "sister: 'jane',",
+      "},",
+      "};",
+
+      "function printPerson({last:shakeAndBake, first, last, city, siblings:{sister}}: Person){",
+      "log(first, last, city, sister, shakeAndBake)",
+      "}",
+
+      "printPerson(bob)"
+    ],
+    "description": "Show how obj destructuring"
+  },
+
+  "destructuring${1:CompName}": {
+    "prefix": "destructuring${1:CompName}",
+    "body": [
+      "const friends: string[] = ['john', 'peter', 'bob', 'anna', 'kelly'];",
+      "const [enemy, peter, bob, anna, kelly, susan] = friends",
+      "log(enemy, peter, bob, anna, kelly, susan) // john peter bob anna kelly undefined"
+    ],
+    "description": "Show how ${1:CompName} destructuring"
+  },
+
+  "${1:CompName}szetszedes": {
+    "prefix": "${1:CompName}szetszedes",
+    "body": [
+      "const friends: string[] = ['john', 'peter', 'bob', 'anna', 'kelly'];",
+      "const [enemy, peter, bob, anna, kelly, susan] = friends",
+      "log(enemy, peter, bob, anna, kelly, susan) // john peter bob anna kelly undefined"
+    ],
+    "description": "Pelda a ${1:CompName}a szetszedesere valtozokba"
+  },
+
+  "dinamicObjKey": {
+    "prefix": "dinamicObjKey",
+    "body": [
+      "type State = {",
+      "loading: boolean;",
+      "name: string;",
+      "job: string;",
+      "products: string[] | undefined",
+      "};",
+      "",
+      "const state: State = {",
+      "loading: true,",
+      "name: '',",
+      "job: '',",
+      "products: undefined",
+      "}",
+      "",
+      "function updateState<K extends keyof State>(key: K, value: State[K]){",
+      "state[key] = value",
+      "}",
+      "",
+      "updateState('name', 'john')"
+    ],
+    "description": "example dinamic obj key"
+  },
+
+  "minusIdx": {
+    "prefix": "[-1]",
+    "body": ["at(-1)"],
+    "description": "minus 1 idx"
+  },
+
+  "fetch": {
+    "prefix": "fetch",
+    "body": [
+      "const url = 'https://www.course-api.com/react-tours-project';",
+      "",
+      "  const getData = async () => {",
+      "  try {",
+      "  const resp = await fetch(url, { method: 'GET'});",
+      "  if(!resp.ok){",
+      " const msg = `There was an error \"${resp.status} ${resp.statusText}\"`",
+      "  throw new Error(msg)",
+      "  }",
+      "  return resp.json(); // Make sure to parse the JSON data",
+      "  } catch (error) {",
+      "  console.log(error);",
+      "  }",
+      "  };",
+      "",
+      "  getData().then((data)=> console.log(data))"
+    ],
+    "description": "fetch example"
+  },
+
+  "filter": {
+    "prefix": "filter",
+    "body": ["filter((${1:data}) => ${1:data}. === otherData)"],
+    "description": "my filter"
+  },
+
+  "forpropertyname": {
+    "prefix": "forpropertyname",
+    "body": [
+      "const person: {[key: string]: string | number; name: string; age:number; status:string} = {",
+      "name: 'john',",
+      "age: 25,",
+      "status: 'student'",
+      "};",
+      "",
+      "for( const propertyName in person){",
+      "log(`${propertyName} : ${person[propertyName]}`)",
+      "}"
+    ],
+    "description": "for in propertyname"
+  },
+
+  "keyvalueentries": {
+    "prefix": "keyvalueentries",
+    "body": [
+      "const person: {[key: string]: string | number; name: string; age: number; status: string} ={",
+      "name: 'john',",
+      "age: 25,",
+      "status: 'students'",
+      "}",
+      "",
+      "const keys = Object.keys(person)",
+      "log(keys) // [ 'name', 'age', 'status' ]",
+      "",
+      "const values = Object.values(person)",
+      "log(values) // [ 'john', 25, 'students' ]",
+      "",
+      "const entries = Object.entries(person)",
+      "log(entries) // [ [ 'name', 'john' ], [ 'age', 25 ], [ 'status', 'students' ] ]"
+    ],
+    "description": "key value entries in ${1:CompName}"
+  },
+
+  "map": {
+    "prefix": "map",
+    "body": ["map((${1:data}) => ${1:data})"],
+    "description": "map"
+  },
+  "promise": {
+    "prefix": "promise",
+    "body": [
+      "const promise = new Promise((resolve, reject):void => {",
+      "resolve('fadl;fas')",
+      "reject('there was an error')",
+      "})",
+      "",
+      "promise.then((data)=>{",
+      "log(data)",
+      "}).catch((err)=> log(err))"
+    ],
+    "description": "promise"
+  },
+  "reduceorsum": {
+    "prefix": "reduceorsum",
+    "body": [
+      "const dailyTotal = obj.reduce((total, objItem)=>{",
+      "total += objImet.someKey",
+      "return total",
+      "}, 0) // start value of total"
+    ],
+    "description": "reduceorsum"
+  },
+  "reduceorsumreturnobj": {
+    "prefix": "reduceorsumreturnobj",
+    "body": [
+      "let {totalItems, cartTotal} = cart.reduce(",
+      "(total, cartItem)=>{",
+      "const {amount, price} = cartItem;",
+      "total.totalItems += amount",
+      "total.cartTotal += price * amount",
+      "return total;",
+      "}, {",
+      "totalItems: 0,",
+      "cartTotal: 0",
+      "})"
+    ],
+    "description": "reduceorsumreturnobj example"
+  },
+
+  "every": {
+    "prefix": "every",
+    "body": [
+      "let nums: number[] = [1, 2, 13, 4]",
+      "",
+      "const isLow: boolean = nums.every((num)=>{",
+      "return num < 10",
+      "})",
+      "",
+      "nums = [1, 2, 1, 4]",
+      "",
+      "const isLow2: boolean = nums.every((num)=> num < 10)",
+      "",
+      "console.log(isLow) // false",
+      "console.log(isLow2) // true"
+    ],
+    "description": "every example"
+  },
+
+  "remove": {
+    "prefix": "remove",
+    "body": [
+      "const index = myArray.indexOf(key, 0);",
+      "if (index > -1) {",
+      "   myArray.splice(index, 1);",
+      "}"
+    ],
+    "description": "remove by value"
+  },
+
+  "regex": {
+    "prefix": "regex",
+    "body": ["stringName.match(/[a-z]/g)"],
+    "description": "regexSetUp"
+  },
+
+  "regexhelper": {
+    "prefix": "regexhelper",
+    "body": [
+      "// Regex segedlet",
+      "// Reguláris Kifejezések Szintaxis",
+      "// Karakterek és Karakterosztályok",
+      "// stringVariable.match",
+      "// shift alt M",
+      "",
+      "// a: Egyezés az 'a' karakterrel.",
+      "// [abc]: Egyezés az 'a', 'b', vagy 'c' karakterekkel.",
+      "// [a-z]: Egyezés bármely kisbetűvel az 'a' és 'z' között.",
+      "// [^abc]: Egyezés minden olyan karakterrel, ami nem 'a', 'b', vagy 'c'.",
+      "// Speciális Karakterek",
+      "",
+      "// .: Egyezés bármilyen karakterrel (kivéve új sor).",
+      "// \\d: Egyezés bármilyen számjeggyel (0-9).",
+      "// \\D: Egyezés bármilyen nem-számjegy karakterrel.",
+      "// \\w: Egyezés bármilyen szókarakterrel (aláhúzás és betűk, számjegyek).",
+      "// \\W: Egyezés bármilyen nem-szókarakterrel.",
+      "// \\s: Egyezés bármilyen szóköz karakterrel (szóköz, tabulátor, új sor stb.).",
+      "// \\S: Egyezés bármilyen nem-szóköz karakterrel.",
+      "// Minta Korlátozások",
+      "",
+      "// *: Egyezés a mintával, amely 0 vagy több alkalommal ismétlődik. Pl. a* egyezik a \"\", a, aaa stb. szövegekkel.",
+      "// +: Egyezés a mintával, amely 1 vagy több alkalommal ismétlődik. Pl. a+ egyezik a a, aaa stb. szövegekkel.",
+      "// ?: Egyezés a mintával, amely 0 vagy 1 alkalommal ismétlődik. Pl. a? egyezik a \"\" vagy a szövegekkel.",
+      "// {n}: Egyezés a mintával, amely pontosan n alkalommal ismétlődik. Pl. a{3} egyezik az aaa szöveggel.",
+      "// {n,}: Egyezés a mintával, amely legalább n alkalommal ismétlődik. Pl. a{2,} egyezik az aa, aaa, aaaa stb. szövegekkel.",
+      "// {n,m}: Egyezés a mintával, amely legalább n, de legfeljebb m alkalommal ismétlődik. Pl. a{2,4} egyezik az aa, aaa, aaaa szövegekkel.",
+      "// Anchorok",
+      "",
+      "// ^: Egyezés a szöveg elején. Pl. ^a egyezik az a karakterrel, ha az a szöveg elején van.",
+      "// $: Egyezés a szöveg végén. Pl. a$ egyezik az a karakterrel, ha az a szöveg végén van.",
+      "// Neha kellhet \\ jel pl \\?$ sor vegi ?",
+      "// Csoportosítás és Alternatívák",
+      "",
+      "// (abc): Csoportosítás. Egyezik az abc mintával és lehetővé teszi a csoportosított rész későbbi hivatkozását."
+    ],
+    "description": "regex helper"
+  },
+
+  "tycomplexobj": {
+    "prefix": "tycomplexobj",
+    "body": [
+      "export type typeImages = {",
+      "small: {url: string | undefined} | undefined",
+      "}",
+      "",
+      "export type typePeople = {",
+      "id: number,",
+      "name: string,",
+      "nickName?: string,",
+      "images?: typeImages[],",
+      "}"
+    ],
+    "description": "type of complex object example"
+  },
+
+  "prevstateObj": {
+    "prefix": "prevstateObj",
+    "body": [
+      "(prevstate) => {",
+      "return {...prevstate, value: newValue};",
+      "}"
+    ],
+    "description": "prevstateObj"
+  },
+
+  "prevstate": {
+    "prefix": "prevstate",
+    "body": ["(prevstate) => {", "return ", "}"],
+    "description": "prevstate"
+  },
+
+  "bhelpsize": {
+    "prefix": "bootstraphelpsize",
+    "body": [
+      "xs: 0,",
+      "sm: 576px,",
+      "md: 768px,",
+      "lg: 992px,",
+      "xl: 1200px,",
+      "xxl: 1400px,"
+    ],
+    "description": "my bootstrap help"
+  },
+
+  "c": {
+    "prefix": "c",
+    "body": ["<div className=\"container\">", "${0}", "</div>"],
+    "description": "my bootstrap"
+  },
+
+  "cf": {
+    "prefix": "cf",
+    "body": ["<div className=\"container-fluid\">", "${0}", "</div>"],
+    "description": "my bootstrap"
+  },
+
+  "cc3": {
+    "prefix": "cc3",
+    "body": [
+      "<div className=\"container\">",
+      "<div className=\"row\">",
+      "<div className=\"col\">",
+      "Column",
+      "</div>",
+      "<div className=\"col\">",
+      "Column2",
+      "</div>",
+      "<div className=\"col\">",
+      "Column",
+      "</div>",
+      "</div>",
+      "</div>"
+    ],
+    "description": "my bootstrap"
+  },
+
+  "cr2c23": {
+    "prefix": "cr2c23",
+    "body": [
+      "<div className=\"container\">",
+      "  <div className=\"row\">",
+      "<div className=\"col\">",
+      "  1 of 2",
+      "</div>",
+      "<div className=\"col\">",
+      "  2 of 2",
+      "</div>",
+      "  </div>",
+      "  <div className=\"row\">",
+      "<div className=\"col\">",
+      "  1 of 3",
+      "</div>",
+      "<div className=\"col\">",
+      "  2 of 3",
+      "</div>",
+      "<div className=\"col\">",
+      "  3 of 3",
+      "</div>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "my bootstrap"
+  },
+
+  "crcrc": {
+    "prefix": "crcrc",
+    "body": [
+      "<div className=\"container\">",
+      "  <div className=\"row\">",
+      "<div className=\"col\">col</div>",
+      "<div className=\"col\">col</div>",
+      "<div className=\"col\">col</div>",
+      "<div className=\"col\">col</div>",
+      "  </div>",
+      "  <div className=\"row\">",
+      "<div className=\"col-8\">col-8</div>",
+      "<div className=\"col-4\">col-4</div>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "my bootstrap"
+  },
+
+  "cmaxcol": {
+    "prefix": "cmaxcol",
+    "body": [
+      "<div className=\"container\">",
+      "  <div className=\"row row-cols-2\">",
+      "<div className=\"col\">Column</div>",
+      "<div className=\"col\">Column</div>",
+      "<div className=\"col\">Column</div>",
+      "<div className=\"col\">Column</div>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "my bootstrap"
+  },
+
+  "rowalignitesmstart": {
+    "prefix": "rowalignitemsStart",
+    "body": [
+      "<div className=\"row align-items-start\">",
+      "  <div className=\"col\">",
+      "One of three columns",
+      "  </div>",
+      "  <div className=\"col\">",
+      "One of three columns",
+      "  </div>",
+      "  <div className=\"col\">",
+      "One of three columns",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "my bootstrap"
+  },
+
+  "rowalignitesmcenter": {
+    "prefix": "rowalignitemsCenter",
+    "body": [
+      "<div className=\"row align-items-center\">",
+      "  <div className=\"col\">",
+      "One of three columns",
+      "  </div>",
+      "  <div className=\"col\">",
+      "One of three columns",
+      "  </div>",
+      "  <div className=\"col\">",
+      "One of three columns",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "my bootstrap"
+  },
+
+  "rowalignitemsEnd": {
+    "prefix": "rowalignitemsEnd",
+    "body": [
+      "<div className=\"row align-items-end\">",
+      "  <div className=\"col\">",
+      "One of three columns",
+      "  </div>",
+      "  <div className=\"col\">",
+      "One of three columns",
+      "  </div>",
+      "  <div className=\"col\">",
+      "One of three columns",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "my bootstrap"
+  },
+
+  "colalignitems": {
+    "prefix": "colalignitems",
+    "body": [
+      "  <div className=\"row\">",
+      "<div className=\"col align-self-start\">",
+      "  One of three columns",
+      "</div>",
+      "<div className=\"col align-self-center\">",
+      "  One of three columns",
+      "</div>",
+      "<div className=\"colalign-self-end\">",
+      "  One of three columns",
+      "</div>",
+      "  </div>"
+    ],
+    "description": "my bootstrap"
+  },
+
+  "Row columns gutters": {
+    "prefix": "crowcolumnsgutters",
+    "body": [
+      "<div className=\"container\">",
+      "  <div className=\"row row-cols-2 row-cols-lg-5 g-2 g-lg-3\">",
+      "<div className=\"col\">",
+      "  <div className=\"p-3 border bg-light\">Row column</div>",
+      "</div>",
+      "<div className=\"col\">",
+      "  <div className=\"p-3 border bg-light\">Row column</div>",
+      "</div>",
+      "<div className=\"col\">",
+      "  <div className=\"p-3 border bg-light\">Row column</div>",
+      "</div>",
+      "<div className=\"col\">",
+      "  <div className=\"p-3 border bg-light\">Row column</div>",
+      "</div>",
+      "<div className=\"col\">",
+      "  <div className=\"p-3 border bg-light\">Row column</div>",
+      "</div>",
+      "<div className=\"col\">",
+      "  <div className=\"p-3 border bg-light\">Row column</div>",
+      "</div>",
+      "<div className=\"col\">",
+      "  <div className=\"p-3 border bg-light\">Row column</div>",
+      "</div>",
+      "<div className=\"col\">",
+      "  <div className=\"p-3 border bg-light\">Row column</div>",
+      "</div>",
+      "<div className=\"col\">",
+      "  <div className=\"p-3 border bg-light\">Row column</div>",
+      "</div>",
+      "<div className=\"col\">",
+      "  <div className=\"p-3 border bg-light\">Row column</div>",
+      "</div>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "my bootstrap"
+  },
+
+  "h1-d": {
+    "prefix": "h1-d",
+    "body": ["<h1 class=\"display-1\">Display 1</h1>"],
+    "description": "my bootstrap"
+  },
+
+  "bhelpcolors": {
+    "prefix": "bhelpcolors",
+    "body": [
+      "\"body\"",
+      "secondary",
+      "tertiary",
+      "emphasis",
+      "border",
+      "primary",
+      "success",
+      "danger",
+      "warning",
+      "info",
+      "light",
+      "dark"
+    ],
+    "description": "my bootstrap help"
+  },
+
+  "formsubmit": {
+    "prefix": "formsubmit",
+    "body": [
+      "e.preventDefault()",
+      "const formData = new FormData(e.currentTarget);",
+      "const dataName = Object.fromEntries(formData);",
+      "e.currentTarget.reset()"
+    ],
+    "description": "form submit"
+  },
+
+  "customHookState": {
+    "prefix": "customHookState",
+    "body": [
+      "import { useState } from \"react\";",
+      "const useToggle = (defaultValue: boolean) => {",
+      "const [show, setShow] = useState(defaultValue);",
+      "const toggle = () => {",
+      "setShow(!show)",
+      "};",
+      "return {show, toggle}",
+      "}",
+      "export default useToggle",
+      "//other comp: import + const {show, toggle} = useToggle(true)"
+    ],
+    "description": "customHookState"
+  },
+
+  "customHookCreate": {
+    "prefix": "customHookCreate",
+    "body": ["const {show, toggle} = useToggle(true)"],
+    "description": "short customHookCreate"
+  },
+
+  "fetchWithCustomHook": {
+    "prefix": "fetchWithCustomHook",
+    "body": [
+      "import { useEffect, useState } from \"react\";",
+      "",
+      "const useFetchPerson = (url: string) => {",
+      "const [isLoading, setIsLoading] = useState(true);",
+      "const [isError, setIsError] = useState(false);",
+      "const [user, setUser] = useState(null);",
+      "",
+      "useEffect(() => {",
+      "const fetchUser = async () => {",
+      "  try {",
+      "const resp = await fetch(url);",
+      "// console.log(resp);",
+      "if (!resp.ok) {",
+      "  setIsError(true);",
+      "  setIsLoading(false);",
+      "  return;",
+      "}",
+      "",
+      "const user = await resp.json();",
+      "setUser(user);",
+      "  } catch (error) {",
+      "setIsError(true);",
+      "  }",
+      "  setIsLoading(false);",
+      "};",
+      "fetchUser();",
+      "  }, []);",
+      "  return {isLoading, isError, user}",
+      "}",
+      "",
+      "export default useFetchPerson",
+      "//const {isLoading, isError, user} = useFetchPerson(url)"
+    ]
+  },
+
+  "contextparent": {
+    "prefix": "contextparent",
+    "body": [
+      "import { createContext, useContext } from \"react\";",
+      "export const NavbarContext  = createContext({})",
+      "export const useAppContext = () => useContext(NavbarContext)",
+      "<NavbarContext.Provider value={{page, setPage}}>"
+    ]
+  },
+
+  "contextchild": {
+    "prefix": "contextchild",
+    "body": ["const {page, setPage} = useAppContext();", "//+ import"]
+  },
+
+  "contextGlobal": {
+    "prefix": "contextGlobal",
+    "body": [
+      "import {createContext, useContext, useState} from 'react'",
+
+      "const GlobalContext = createContext({});",
+
+      "export const useGlobalContext = () => useContext(GlobalContext)",
+
+      "const AppContext = ({children}:any) => {",
+      "  const [name, setName] = useState('peter');",
+
+      "  return (",
+      "    <GlobalContext.Provider value={{name, setName}}>",
+      "      {children}",
+      "    </GlobalContext.Provider>",
+      "  )",
+      "}",
+
+      "export default AppContext",
+      "//const { name, setName } = useGlobalContext() as { name: any, setName: any }; child",
+      "//<AppContext><App><AppContext/> main"
+    ]
+  },
+
+  "nodejssetup": {
+    "prefix": "nodejssetup",
+    "body": [
+      "const express = require('express');",
+      "const app = express();",
+      "const cors = require('cors')",
+      "const port = 3000;",
+      "app.use(cors())",
+      "app.get('/', (req, res) => {",
+      "  res.send('Hello, TypeScript with Express!');",
+      "});",
+      "app.${1:CompName}en(port, () => {",
+      "  console.log(`Server is running on http://localhost:${port}`);",
+      "});"
+    ],
+    "description": "nodejssetup"
+  },
+
+  "nodejssetupWithsequalize": {
+    "prefix": "nodejssetupWithsequalize",
+    "body": [
+      "import express from 'express';",
+      "const app = express();",
+      "const cors = require('cors');",
+      "app.use(cors());",
+      "const port = 3000;",
+      "const db = require('../models')",
+      "app.get('/', (req, res) => {",
+      "  res.send('Hello, TypeScript with Express!');",
+      "});",
+      "db.sequelize.sync().then(()=>{",
+      "app.${1:CompName}en(port, () => {",
+      "  console.log(`Server is running on http://localhost:${port}`);",
+      "});",
+      "});"
+    ],
+    "description": "nodejssetup"
+  },
+
+  "sequelizeModuleExample": {
+    "prefix": "sequelizeModuleExample",
+    "body": [
+      "module.exports = (sequelize, DataTypes) => {",
+      "    const Posts = sequelize.define(\"Posts\", {",
+      "        title: {",
+      "            type: DataTypes.STRING,",
+      "            allowNull: false,",
+      "        },",
+      "        postText: {",
+      "            type: DataTypes.STRING,",
+      "            allowNull: false,",
+      "        },",
+      "        username: {",
+      "            type: DataTypes.STRING,",
+      "            allowNull: false,",
+      "        },",
+      "    })",
+      "    return Posts",
+      "}"
+    ],
+    "description": "sequelizeModuleExample"
+  },
+
+  "routerParentnodejs": {
+    "prefix": "routerParentnodejs",
+    "body": [
+      "app.use(express.json())",
+      "const postRouter = require('../routes/Posts')",
+      "app.use(\"/posts\", postRouter)"
+    ],
+    "description": "routerParentnodejs"
+  },
+
+  "routerchildnodejs": {
+    "prefix": "routerchildnodejs",
+    "body": [
+      "const express = require('express')",
+      "const router = express.Router()",
+      "import { Request, Response } from 'express';",
+      "router.get('/', (req: Request, res: Response) => {",
+      "    res.send(\"Hello World!\")",
+      "});",
+      "module.exports = router"
+    ],
+    "description": "routerchildnodejs"
+  },
+
+  "post": {
+    "prefix": "post",
+    "body": [
+      "router.post('/', async (req: Request, res: Response) =>{",
+      "const post = req.body",
+      "await Posts.create(post)",
+      "res.json(post)",
+      "// const { Posts } = require('../models')",
+      "})"
+    ],
+    "description": "post"
+  },
+
+  "get": {
+    "prefix": "get",
+    "body": [
+      "router.get(\"/\", async (req: Request, res: Response) => {",
+      "  const ${1:CompName}OfPosts = await Posts.findAll()",
+      "  res.json(${1:CompName}OfPosts);",
+      "});"
+    ],
+    "description": "post"
+  },
+
+  "axoisGet": {
+    "prefix": "axoisGet",
+    "body": [
+      "axios.get(rout).then((response) =>{",
+      "console.log(response.data);",
+      "});"
+    ],
+    "description": "post"
+  },
+
+  "routeInReact": {
+    "prefix": "routeInReact",
+    "body": [
+      "import { BrowserRouter as Router, Route, Routes } from \"react-router-dom\";",
+      "const App = () => {",
+      "  return (",
+      "    <Router>",
+      "      <Routes>",
+      "        <Route path=\"/\" element={${0}} />",
+      "      </Routes>",
+      "    </Router>",
+      "  );",
+      "};",
+      "export default App;"
+    ],
+    "description": "routeInReact"
+  },
+
+  "axoisPost": {
+    "prefix": "axoisPost",
+    "body": [
+      "axios",
+      ".post(rout + \"/posts\", raw, {",
+      "  headers: {",
+      "    \"Content-Type\": \"application/json\",",
+      "  },",
+      "})",
+      ".then((response) => {",
+      "  console.log(response.data);",
+      "})",
+      ".catch((error) => {",
+      "  console.error(error);",
+      "});"
+    ],
+    "description": "post"
+  },
+
+  "osszekapcsolasDB": {
+    "prefix": "osszekapcsolasDB",
+    "body": [
+      "Posts.associate = (models) =>{",
+      "Posts.hasMany(models.Comments, {",
+      "onDelete: 'cascade' //ha torolok egy postot, kitorli a hozza tartozo commenteket",
+      "})",
+      "}"
+    ],
+    "description": "osszekapcsolasDB"
+  },
+
+  "bcrypt": {
+    "prefix": "bcryptHashPassworld",
+    "body": [
+      "bcrypt.hash(passworld,10).then((hash) => {",
+      "Users.create({",
+      "username: username,",
+      "password: hash,",
+      "})",
+      "res.json(\"Success\";",
+      "})"
+    ],
+    "description": "bcryptHashPassworld"
+  },
+
+  "postWhere": {
+    "prefix": "postWhere",
+    "body": [
+      "const comments = await Comments.findAll({where:{ PostId: postId}});"
+    ],
+    "description": "postWhere"
+  },
+
+  "bcryptback": {
+    "prefix": "bcryptHashCompare",
+    "body": [
+      "bcrypt.compare(password, user.password).then((match) => {if (match) {res.json(\"success\")}else{res.json(\"error\")}})"
+    ],
+    "description": "bcryptHashCompare"
+  },
+
+  "token": {
+    "prefix": "tokencreate",
+    "body": [
+      "const accessToken = sign({sername: user.username, id: user.id }, \"importantsecret\")",
+      "res.json(accessToken)"
+    ],
+    "description": "tokencreate"
+  },
+
+  "http req": {
+    "prefix": "httpreqhtml",
+    "body": [
+      "\tconst http = require('http')",
+      "",
+      "\tconst server = http.createServer((req, res)=> {",
+      "\t\tconsole.log(req.url, req.method, req.headers)",
+      "\t\tres.setHeader('Content-type', 'text/html')",
+      "\t\tres.write('<html>')",
+      "\t\tres.write('<head><title>NodeJS</title></head>')",
+      "\t\tres.write('<body><h1>NodeJs</h1></body>')",
+      "\t\tres.write('</html>')",
+      "\t\tres.end()",
+      "\t\tprocess.exit()",
+      "\t})",
+      "",
+      "\tserver.${1:CompName}en(3000)"
+    ],
+    "description": "http req"
+  },
+
+  "httpPostMethod": {
+    "prefix": "httpPostMethod",
+    "body": [
+      "const http = require('http')",
+      "",
+      "\tconst server = http.createServer((req, res)=> {",
+      "\t\tconst url = req.url",
+      "\t\tconst method = req.method",
+      "\t\tif (url === '/message' && method === 'POST'){",
+      "\t\t\tconst body = []",
+      "\t\t\treq.on('data', (chunk)=>{",
+      "\t\t\t\tconsole.log(chunk)",
+      "\t\t\t\tbody.push(chunk)",
+      "\t\t\t})",
+      "\t\t\treq.on('end', () => {",
+      "\t\t\t\tconst parsedBody = Buffer.concat(body).toString()",
+      "\t\t\t\tconsole.log(parsedBody)",
+      "\t\t\t})",
+      "\t\t}",
+      "",
+      "\t\tres.setHeader('Content-type', 'text/html')",
+      "\t\tres.write('<html>')",
+      "\t\tres.write('<head><title>NodeJS</title></head>')",
+      "\t\tres.write('<body><h1>NodeJs</h1><form action=\"/message\" method=\"POST\"><input name=\"message\" type=\"text\"></input><button type=\"submit\">kuld</button></form></body>')",
+      "\t\tres.write('</html>')",
+      "\t\tres.end()",
+      "\t})",
+      "",
+      "\tserver.${1:CompName}en(3000)"
+    ],
+    "description": "httpPostMethod"
+  },
+
+  "jest": {
+    "prefix": "jest",
+    "body": [
+      "\ttest('Az \"anna\" az palindrom.', () => {",
+      "\t\texpect(isPalindrome('anna')).toBe(true)",
+      "\t})"
+    ],
+    "description": "jest"
+  },
+
+  "jestDescribe": {
+    "prefix": "jestDescribe",
+    "body": [
+      "\tdescribe('TodoController.createTodo', ()=>{",
+      "\t\tit('should have a createTodo function', ()=>{",
+      "\t\t\texpect(typeof TodoController.createTodo).toBe('function')",
+      "\t\t})",
+      "\t})"
+    ],
+    "description": "tesztforgato konyv"
+  },
+
+  "mongooseSetUp": {
+    "prefix": "mongooseSetUp",
+    "body": [
+      "\tconst mongoose = require('mongoose')",
+      "",
+      "\tconst TodoSchema = mongoose.Schema({",
+      "\t\ttitle:{",
+      "\t\t\ttype: String,",
+      "\t\t\trequire: true, // kotelezo a mezo?",
+      "\t\t},",
+      "\t\tdone: {",
+      "\t\t\ttype: Boolean,",
+      "\t\t\trequire: true",
+      "\t\t}",
+      "\t})",
+      "",
+      "\tconst TodoModel = mongoose.model('Todo', TodoSchema)",
+      "",
+      "\tmodule.exports = {",
+      "\t\tTodoModel",
+      "\t}"
+    ],
+    "description": "mongooseSetUp"
+  },
+
+  "enumIndex": {
+    "prefix": "enumIndex",
+    "body": [
+      "\tenum colours {",
+      "        gray, //default",
+      "        yellow,",
+      "        red,",
+      "        blue,",
+      "        stone,",
+      "      }",
+      "      const colorValue = colours[newStage[x].colors[y] as keyof typeof colours];"
+    ],
+    "description": "enumIndex"
+  },
+
+  "random 1-4": {
+    "prefix": "random 1-4",
+    "body": ["Math.floor(Math.random() * 4) + 1;"],
+    "description": "random 1-4"
+  },
+
+  "fetchUseEffect": {
+    "prefix": "fetchUseEffect",
+    "body": [
+      "  const [${1:stateName}s, set${1:stateName}s] = useState([]);",
+      "",
+      "  useEffect(() => {",
+      "    const fetchData = async () => {",
+      "      try {",
+      "        const response = await axios.get(\"http://localhost:3000/${1:stateName}\");",
+      "        console.log(response.data);",
+      "        set${1:stateName}s(response.data);",
+      "      } catch (error) {",
+      "        console.error(\"Hiba történt az adatok lekérése közben:\", error);",
+      "      }",
+      "    };",
+      "    fetchData();",
+      "  }, []);"
+    ],
+    "description": "fetchUseEffect"
+  },
+
+  "icompsetup": {
+    "prefix": "icompsetup",
+    "body": [
+      "interface ${1:CompName}Props {",
+      "",
+      "}",
+      "",
+      "const ${1:CompName} = (props: ${1:CompName}Props) => {",
+      "",
+      "return <div className=\"container\">${1:CompName}</div>;",
+      "};",
+      "",
+      "export default ${1:CompName};"
+    ],
+    "description": "icompsetup"
+  },
+  "status500": {
+    "prefix": "status500",
+    "body": [
+      "return {",
+      "status: 500,",
+      "message: {",
+      "  title: \"Hiba az adatok rögzítése során\",",
+      "  variant: \"destructive\",",
+      "},"
+    ],
+    "description": "status 500"
+  },
+  "status200": {
+    "prefix": "status200",
+    "body": [
+      "return {",
+      "      status: 200,",
+      "      message: {",
+      "        title: \"Sikeres adatok rögzítése\",",
+      "        variant: \"default\",",
+      "      },",
+      "      data: order,",
+      "};"
+    ],
+    "description": "status 200"
   }
 }
